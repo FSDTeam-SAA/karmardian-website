@@ -74,7 +74,7 @@ export function MembershipSection() {
         </div>
       </div>
 
-      <section className="bg-black py-20 px-4 sm:px-6 lg:px-8">
+      <section id="about" className="bg-black py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-white mb-8">

@@ -97,9 +97,10 @@ export function SignatureExperiences() {
                 <p
                   onClick={() => handleScroll("start-planning")}
                   className="text-gray-400 text-sm leading-relaxed mb-4 cursor-pointer hover:text-white transition-colors"
-                >
-                  {experience.desccription || experience.desccription}
-                </p>
+                  dangerouslySetInnerHTML={{
+                    __html: experience.desccription || "",
+                  }}
+                ></p>
 
                 {/* Link clickable */}
                 <button
