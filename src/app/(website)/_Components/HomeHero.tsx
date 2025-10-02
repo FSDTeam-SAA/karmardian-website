@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function HomeHero() {
@@ -11,23 +12,22 @@ export default function HomeHero() {
   }
 
   return (
-    <div className="min-h-screen">
-      <section className="relative h-[calc(100vh)] w-full flex items-center justify-start">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url('/images/tour.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/tour.jpg"
+          alt="Hero Background"
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      {/* Hero Content */}
+      <section className="relative z-10 h-screen flex items-center justify-start">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl">
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif font-bold text-white leading-tight mb-6">
               Prestige travel, minus the predictable.
