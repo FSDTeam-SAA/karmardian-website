@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,9 +7,15 @@ export default function Footer() {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col md:flex-row items-center md:justify-between gap-6 md:gap-0">
           {/* Left side - Logo and brand */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-8 h-8 bg-white text-black font-bold text-sm">RR</div>
-            <span className="text-white font-medium text-sm md:text-base">Rare Routes</span>
+          <div className="relative">
+            <div className="absolute inset-0 bg-white/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full" />
+            <Image
+              width={200}
+              height={200}
+              src="/images/logoadd.png"
+              alt="Rare Routes Logo"
+              className="w-12 h-12 object-contain transition-all duration-300 group-hover:scale-110 relative z-10"
+            />
           </div>
 
           {/* Center - Copyright */}
@@ -18,13 +25,22 @@ export default function Footer() {
 
           {/* Right side - Links */}
           <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
-            <Link href="https://instagram.com" className="text-zinc-400 hover:text-white transition-colors text-sm">
+            <Link
+              href="https://instagram.com"
+              className="text-zinc-400 hover:text-white transition-colors text-sm"
+            >
               Instagram
             </Link>
-            <Link href="/newsletter" className="text-zinc-400 hover:text-white transition-colors text-sm">
+            <Link
+              href="/newsletter"
+              className="text-zinc-400 hover:text-white transition-colors text-sm"
+            >
               Newsletter
             </Link>
-            <Link href="/legal" className="text-zinc-400 hover:text-white transition-colors text-sm">
+            <Link
+              href="/legal"
+              className="text-zinc-400 hover:text-white transition-colors text-sm"
+            >
               Legal
             </Link>
           </div>
