@@ -16,7 +16,7 @@ export default function HomeHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/tour.jpg"
+          src="/images/karmadianHero.jpeg"
           alt="Hero Background"
           fill
           style={{ objectFit: "cover" }}

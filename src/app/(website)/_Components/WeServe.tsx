@@ -47,7 +47,7 @@ export function WeServe() {
             <Button
               variant="outline"
               size="lg"
-              className="border-white/30 bg-transparent hover:bg-white/10 text-white px-8 py-6 text-base font-medium"
+              className="border-white/30 bg-transparent hover:bg-white/10 hover:text-white text-white px-8 py-6 text-base font-medium"
             >
               {whoWeServeData.ctaText}
             </Button>
