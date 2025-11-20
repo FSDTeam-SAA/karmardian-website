@@ -41,7 +41,7 @@ export function Navbar() {
   const navLinks = [
     { id: "experiences", label: "Experiences" },
     { id: "destinations", label: "Destinations" },
-    { id: "membership", label: "Membership" },
+    // { id: "membership", label: "Membership" },
     { id: "about", label: "About" },
   ];
 
@@ -76,7 +76,8 @@ export function Navbar() {
             </span>
           </Button>
 
-          {/* Desktop Navigation Links */}
+          <div className="flex gap-10">
+            {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Button
@@ -125,6 +126,7 @@ export function Navbar() {
                 </svg>
               </span>
             </Button>
+          </div>
           </div>
 
           {/* Mobile Menu Button */}

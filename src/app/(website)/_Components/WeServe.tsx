@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
-// Dummy data for the "Who we serve" section
+// Dummy data for the "Who we serve" section-
 const whoWeServeData = {
   title: "Who we serve",
   features: [
@@ -11,8 +10,8 @@ const whoWeServeData = {
   ],
   ctaText: "Explore membership",
   ctaLink: "/membership",
-  imageUrl: "/images/destinations.jpg",
-}
+  imageUrl: "/images/kar-we.png",
+} 
 
 export function WeServe() {
   return (
@@ -44,13 +43,13 @@ export function WeServe() {
               ))}
             </ul>
 
-            <Button
+            {/* <Button
               variant="outline"
               size="lg"
               className="border-white/30 bg-transparent hover:bg-white/10 hover:text-white text-white px-8 py-6 text-base font-medium"
             >
               {whoWeServeData.ctaText}
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

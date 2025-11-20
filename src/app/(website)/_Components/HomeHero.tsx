@@ -11,6 +11,7 @@ export default function HomeHero() {
     }
   }
 
+
   return (
     <div className="min-h-screen relative">
       {/* Background Image */}
@@ -52,7 +53,7 @@ export default function HomeHero() {
                 size="lg"
                 variant="outline"
                 className="border-white/30 bg-black/20 hover:bg-black/40 hover:text-red-700 text-white px-8 py-6 text-base font-medium backdrop-blur-sm"
-                onClick={() => handleScroll("signature-routes")}
+                onClick={() => handleScroll("experiences")}
               >
                 See Signature Routes
               </Button>

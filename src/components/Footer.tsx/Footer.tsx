@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Right side - Links */}
           <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/accounts/login/?next=%2Ftherareroutes%2F&source=omni_redirect"
               className="text-zinc-400 hover:text-white transition-colors text-sm"
             >
               Instagram
@@ -43,6 +43,16 @@ export default function Footer() {
             >
               Legal
             </Link>
+          </div>
+        </div>
+        <div className="flex justify-center mr-[150px]">
+          <div>
+            <p className="inline-block px-6 py-2 text-center  text-white rounded-md shadow-md transition-all duration-200">
+              SOT: 2166950-40
+            </p>
+            <p className="inline-block px-6 py-2 text-center  text-white rounded-md shadow-md transition-all duration-200">
+              TCRC ID: 710089
+            </p>
           </div>
         </div>
       </div>

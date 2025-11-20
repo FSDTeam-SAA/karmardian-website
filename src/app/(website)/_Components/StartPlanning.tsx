@@ -128,7 +128,7 @@ export default function StartPlanning() {
           {/* Textarea */}
           <textarea
             name="details"
-            placeholder="What vibe? When? How many nights? Non-negotiables?"
+            placeholder="What vibe? When? How many nights? Non-negotiables? Budget?"
             rows={5}
             value={formData.details}
             onChange={handleChange}
@@ -149,11 +149,11 @@ export default function StartPlanning() {
           </p>
         </form>
       </section>
-      <div className="flex justify-center pb-8">
+      {/* <div className="flex justify-center pb-8">
         <p className="inline-block px-6 py-2 text-center  text-white rounded-md shadow-md transition-all duration-200">
           SOT# 2166950-40 and TCRC ID: 710089
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
