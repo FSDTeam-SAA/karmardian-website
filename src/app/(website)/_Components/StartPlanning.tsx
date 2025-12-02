@@ -21,7 +21,6 @@ export default function StartPlanning() {
     details: "",
   });
 
-  // React Query mutation for form submission
   const formSubmitMutation = useMutation({
     mutationFn: async () => {
       const res = await fetch(
@@ -47,7 +46,7 @@ export default function StartPlanning() {
       return res.json();
     },
     onSuccess: (data) => {
-      toast.success(data.message || "Form submitted successfully !");
+      toast.success(data.message || "Form submitted successfully!");
       setFormData({
         name: "",
         email: "",
@@ -76,15 +75,18 @@ export default function StartPlanning() {
   };
 
   return (
-    <div className="bg-black">
-      <section className="mx-auto max-w-7xl pb-20" id="start-planning">
-        <h1 className="mb-12 font-serif text-6xl font-bold text-white">
+    <div className="bg-black w-full">
+      <section
+        className="mx-auto max-w-7xl pb-20 px-4 lg:px-0 sm:px-6"
+        id="start-planning"
+      >
+        <h1 className="lg:mb-12 mb-6 font-serif lg:text-6xl text-4xl md:text-3xl font-bold text-white text-start md:text-left">
           Start planning
         </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* First row - Name and Email */}
-          <div className="grid gap-6 md:grid-cols-2">
+        <form onSubmit={handleSubmit} className="space-y-6 w-full">
+          {/* First row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
               name="name"
@@ -92,7 +94,7 @@ export default function StartPlanning() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0"
+              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0 w-full"
             />
             <input
               type="email"
@@ -101,19 +103,19 @@ export default function StartPlanning() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0"
+              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0 w-full"
             />
           </div>
 
-          {/* Second row - Home base and Instagram */}
-          <div className="grid gap-6 md:grid-cols-2">
+          {/* Second row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
               name="homeBase"
               placeholder="Home base"
               value={formData.homeBase}
               onChange={handleChange}
-              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0"
+              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0 w-full"
             />
             <input
               type="text"
@@ -121,7 +123,7 @@ export default function StartPlanning() {
               placeholder="Instagram (optional)"
               value={formData.instagram}
               onChange={handleChange}
-              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0"
+              className="rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0 w-full"
             />
           </div>
 
@@ -135,7 +137,7 @@ export default function StartPlanning() {
             className="w-full rounded-lg border border-zinc-800 bg-transparent px-6 py-4 text-zinc-400 placeholder-zinc-600 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0"
           />
 
-          {/* Submit button */}
+          {/* Submit */}
           <button
             type="submit"
             className="w-full rounded-lg bg-teal-600 py-4 font-medium text-black transition-colors hover:bg-teal-500"
@@ -143,17 +145,11 @@ export default function StartPlanning() {
             Submit
           </button>
 
-          {/* Footer text */}
-          <p className="text-sm text-zinc-500">
+          <p className="text-sm text-zinc-500 text-center md:text-left">
             Prefer Signal? Add a note and we&apos;ll switch.
           </p>
         </form>
       </section>
-      {/* <div className="flex justify-center pb-8">
-        <p className="inline-block px-6 py-2 text-center  text-white rounded-md shadow-md transition-all duration-200">
-          SOT# 2166950-40 and TCRC ID: 710089
-        </p>
-      </div> */}
     </div>
   );
 }

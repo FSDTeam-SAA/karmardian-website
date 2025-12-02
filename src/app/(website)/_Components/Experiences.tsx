@@ -59,7 +59,7 @@ export function SignatureExperiences() {
 
   if (isError || !experienceData?.success) {
     return (
-      <section className="bg-black py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-black lg:py-20 py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-white text-center">
           Failed to load experiences.
         </div>
@@ -70,10 +70,10 @@ export function SignatureExperiences() {
   const experiences = experienceData.data; // API data array
 
   return (
-    <section id="experiences" className="bg-black py-20 px-4 sm:px-6 lg:px-8">
+    <section id="experiences" className="bg-black lg:py-20 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-12">
+        <h2 className="text-4xl sm:text-3xl font-serif font-bold text-white lg:mb-12 mb-6">
           Signature experiences
         </h2>
 
